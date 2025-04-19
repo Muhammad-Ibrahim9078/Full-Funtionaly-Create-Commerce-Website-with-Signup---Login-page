@@ -1,0 +1,71 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #dfdfdf;
+}
+
+.resultEl{
+    display: flex;
+    /* grid-template-columns: auto auto auto; */
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.header > h1{
+    color: #fff;
+}
+
+/* imgset */
+
+
+.carCard{
+    text-align: center;
+    /* padding: auto auto; */
+}
+
+.header{
+    background-color: #ae4444;
+    border: 10px solid #8e3131;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: magenda;
+}
+
+/* header{
+    margin: 0;
+    padding: 0;
+    background-color: #ae4444;
+    border: 10px solid #8e3131;
+    color: white;
+    height: 50px;
+} */
+
+
+#Scrolldown{
+    width: 100px;
+    height: 25px;
+}
+
+
+/* main */
+
+main{
+    margin-top: 50px;
+}
+
+/* .car-card{
+
+} */
+
+
+
+
+
+
+
+@font-face {
+    font-family: magenda;
+    src: url("../Fonts/MagendaRegular-MVwjx.ttf");
+}

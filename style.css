@@ -1,0 +1,183 @@
+
+body{
+    background-color: #d7fffe;
+    /* background-image: url('Picutres/bg\ img.png');
+    background-repeat: no-repeat;
+    background-position: right center; */
+    /* background-size: 300px 200px; */
+}
+
+
+header{
+    margin: 0;
+    padding: 0;
+    background-color: #ae4444;
+    color: white;
+    height: 50px;
+    border: 10px solid #8e3131;
+}
+
+h1{
+    margin: 0;
+    padding: 0;
+    margin-left: 10px;
+    font-family: Designer;
+}
+
+main{
+    text-align: center;
+    margin:auto;
+}
+
+/* Login Page Styles */
+
+h2{
+    font-family: HightBeginer;
+    font-size: 50px;
+}
+
+
+.login{
+    background-color: rgba(240, 240, 240, 0.5);
+    text-align: center;
+    border-radius: 5px;
+    width: 300px;
+    height: 270px;
+    margin: auto;  
+}
+
+
+/* Email Input  */
+.password, .userName{
+    margin-top: 3px;
+}
+
+
+
+.email, .password, .userName{
+    border-radius: 4px;
+}
+
+
+.orSpace{
+    padding-top: 10px;
+}
+
+.loginButton{
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 90%;
+    height: 35px;
+}
+
+.loginButton:hover{
+    transform: scale(1.05);
+}
+
+
+/* signup styling */
+
+.signup{
+    background-color: #f0f0f0;
+    text-align: center;
+    border-radius: 5px;
+    width: 300px;
+    height: 50px;
+    margin: auto;  
+}
+
+
+
+
+
+/* E-Commerce Img alignment */
+.image{
+    position: absolute;
+    /* left: 220px; */
+    left: 100px;
+    top: 100px;
+}
+
+
+.bgImage{
+    width: 430px;
+    opacity: 0.9;
+}
+
+
+
+
+
+
+/* 2nd Section */
+
+.signup {
+    margin: 5px;
+    display: inline-block;
+  }
+  
+  .inlineSignup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* Font Family  */
+
+  @font-face {
+    font-family: HightBeginer;
+    src: url('Fonts/HighBeginning-PersonalUse.otf');
+  }
+
+
+  @font-face {
+    font-family: Designer;
+    src: url('Fonts/Designer.otf');
+  }
+
+
+
+
+
+
+
+
+  /* all Screen sizing */
+
+
+  @media (max-width: 1288px) {
+    .image{
+        display: none;
+    }
+  }
+
+
+
+    @media (max-width: 516px) {
+        header{
+            height: 80px;
+        }
+    }
