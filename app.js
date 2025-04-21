@@ -1,16 +1,20 @@
 // Login Function
 function LoginButton() {
+    // localStorage.clear(); // Clear local storage 
     let emailEl    = document.querySelector('.email').value.trim();
     let passwordEl = document.querySelector('.password').value.trim();
 
-    let usersData = localStorage.getItem("users"); // "email|pass|name\email2|pass2|name2..."
 
+    // Data stored in local storage
+    let usersData = localStorage.getItem("users"); 
+
+    // Condition Check Wrong & True
     if (!usersData) {
         alert("No users found! Please sign up first.");
         return;
     }
 
-    let users = usersData.split("\\");
+    let users = usersData.split("&");
 
     for (let i = 0; i < users.length; i++) {
         let [email, password, username] = users[i].split("|");
@@ -64,6 +68,8 @@ function signup() {
     `;
 }
 
+
+
 // Signup Logic (for multiple users)
 function loginPage() {
     let email    = document.querySelector('.email').value.trim();
@@ -73,14 +79,17 @@ function loginPage() {
     if (email && password && username) {
         let userData = email + "|" + password + "|" + username;
         let usersData = localStorage.getItem("users");
-        let updated = usersData ? (usersData + "\\" + userData) : userData; // Use newline character to separate users
+        let updated = userData;
+        if (usersData) {
+            updated = usersData + " & " + userData;
+        }
         localStorage.setItem("users", updated);
 
         alert("Signup successful! Please login.");
         location.href = "index.html";  // back to login page
-    } else {
-        alert("Please fill in all fields.");
-    }
+        } else {
+            alert("Please fill in all fields.");
+        }
 }
 
 

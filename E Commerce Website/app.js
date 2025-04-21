@@ -1,3 +1,4 @@
+//  Main Work
 let items = [
     {
         name: 'Down Shoulder T-Shirt',
@@ -64,6 +65,14 @@ let items = [
         isImported: true
     },
     {
+        name: 'Shoes',
+        brand: "Sports",
+        color: 'Red, Blue & White',
+        price: 80,
+        imgSrc: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxwVVRLuoCQ-ZhjdtfSDd0BoRgo3HBcA765w&s",
+        isShoes: true
+    },
+    {
         name: 'T-Shirt',
         brand: "Addidas",
         color: 'Black',
@@ -81,10 +90,10 @@ let items = [
     },
     {
         name: 'Joggers Shoes',
-        brand: "Sports",
-        color: 'Black & Yellow',
+        brand: "NIke",
+        color: 'Red',
         price: 50,
-        imgSrc: "https://trex.com.pk/uploads/trex/O55m9kWqk38H4mHFxISq97NC8zuuJ2eKMWn2ywpI.webp",
+        imgSrc: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c2hvZXxlbnwwfHwwfHx8MA%3D%3D",
         isShoes: true
     }
 ];
@@ -93,6 +102,7 @@ let items = [
 let itemsListing = document.querySelector(".resultEl");
 
 
+// in HTML 
 
 function listItemss(itmes) {
     for (let i = 0; i < itmes.length; i++) {
@@ -111,26 +121,27 @@ function makeCarCard(items) {
             </div>`;
 }
 
-    // important or pakitani cars
+
+
+// Filter Work / Logic
+
 function filterCars(el) {
     let filterHoiwiItmes = [];
+    // Shoes
     for (let i = 0; i < items.length; i++) {
         if (el.value === 'Shoes' && items[i].isShoes) {
             filterHoiwiItmes.push(items[i]);
         } 
+    // T-Shirt
     if (el.value === 'T-Shirt' && items[i].isTShirt) {
         filterHoiwiItmes.push(items[i]);
     }
-
+    // Watch
     if (el.value === 'watch' && items[i].iswatch) {
         filterHoiwiItmes.push(items[i]);
     }
-
-    }
-
-
-    // Tshirt
-
+}
+    // All Items show
     if(el.value === 'All') {
         filterHoiwiItmes = items.slice(0);
     }
@@ -138,12 +149,6 @@ function filterCars(el) {
     itemsListing.innerHTML = "";
     listItemss(filterHoiwiItmes);
 }
-
-// by default
+// by default show
 listItemss(items);
 
-
-
-
-
-// isCap: false
