@@ -7,23 +7,133 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Header -->
+
     <header>
-        <section class="header">
-                <h1>This is My E-Commerce Store</h1>
-            <select id="Scrolldown" onchange="filterCars(this)">
+
+        <div class="navbar">
+            <div class="nav-logo border">
+                <div class="logo">
+                    
+                </div>
+            </div>
+            <div class="nab-address border">
+                <p class="add-first">Deliver to</p>
+                <div class="add-icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p class="add-sec">Pakistan</p>
+                </div>
+            </div>
+    <!-- Apply Filler -->
+               <select id="Scrolldown" onchange="filterCars(this)">
                 
                 <option value="All">All</option>
                 <option value="Shoes">Shoes</option>
                 <option value="T-Shirt">T-Shirt</option>
                 <option value="watch">Watch</option>
             </select>
+
+            <div class="nav-singin border">
+                <p><span>Hello, sign in</span></p>
+                <p class="nav-second">Account & Lists</p>
+            </div>
+<!-- Shopping Logo -->
+            <div class="nav-cart">
+                    <img src="../Picutres/shopping logo.png" alt="shopping-Logo" width="50px" class="shopping-Logo" onclick="shooping()">
+                    <span>1</span>
+            </div>
+
+
+    <!-- Page Logout -->
+        <div class="aHref">
+            <a href="../index.html">Logout</a>
+        </div>
+        </div>
+      
+            <section class="panel">
+                <div class="panel-all">
+                    <i class="fa-solid fa-bars"></i>
+                All
+                </div>
+                <div class="panel-ops">
+                    <p>Today's Deals</p>
+                    <p>Customer Service</p>
+                    <p>Registry</p>
+                    <p>Gift Card</p>
+                    <p>Sell</p>
+                </div>
+                <div class="panel-deals">
+                    Shop Deal in Electronics
+                </div>
+            </section>
+
+
+            <!-- Banner or Img -->
+        <section class="hero-section">
+            <div class="hero-messege">
+                You are on My E Commerce. You can also shop of  My E Commerce Pakistan for millions of products with fast local delivery. <a class="click-here">Click Here for More Information</a>
+            </div>
         </section>
+
+
     </header>
 
+
+
+
+<!-- Add to Cart Funtion -->
     <main>
+        <div class="side">
+            <div class="openAddtoCart"></div>
+        </div>
+
+
+
+    <!-- All items Show -->
+
         <div class="resultEl"></div>
     </main>
+
+
+
+
+
+
+
+    <!-- footer -->
+
+    <footer>
+        <div>
+            <p>Privacy Policy:</p>
+        <p>Contact: 0335-0012453</p>
+        <p>Email: ecommerce@gmail.com</p>
+        </div>
+
+
+        <div class="WebLogo">
+            <img src="../Images/thisLogo.png" alt="ThiswebLogo" class="ThiswebLogo">
+        </div>
+
+
+    <!-- facebook, insta, youtube logo -->
+    
+        <div class="imgSize">
+            <img src="../Picutres/facebook Logo.png" alt="facebook-Logo">
+            <img src="../Picutres/Youtube logo.png" alt="youtube-Logo">
+            <img src="../Picutres/insta logo.png" alt="insta-Logo">
+        </div>
+
+    </footer>
+
+
+
+
+
+
+    
 
     <script src="app.js"></script>
 </body>
 </html>
+
+

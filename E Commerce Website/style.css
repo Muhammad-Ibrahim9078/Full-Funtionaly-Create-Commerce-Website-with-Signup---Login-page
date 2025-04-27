@@ -4,17 +4,207 @@ body{
     background-color: #dfdfdf;
 }
 
+
+
+
+
+
+
+/* Top or Header Styling */
+*{
+    margin: 0;
+    font-family: Arial;
+    border: border-box;
+}
+
+
+
+/* Nav bar */
+
+.navbar{
+    height: 60px;
+    background-color: #0f1111;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+
+
+.nav-logo{
+    height: 50px;
+    width: 100px;
+}
+
+
+
+/* this Website Logo */
+.logo{
+    background-image: url("../Images/thisLogo.png");
+    background-size: cover;
+    height: 50px;
+    width: 100%;
+}
+
+
+.border{
+    border: 1.5px solid transparent;
+}
+
+
+
+
+.border:hover{
+    border: 1.5px solid white;
+}
+
+
+
+/* Box 2 */
+
+.add-first{
+    color: #cccccc;
+    font-size: 0.85rem;
+    margin-left: 15px;
+}
+
+
+
+.add-sec{
+    font-size: 1rem;
+    margin-left: 3px;
+}
+
+
+.add-icon{
+    font-size: 1rem;
+    border: none;
+    display: flex;
+    align-items: center;
+}
+
+
+/* box 4 */
+
+span{
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+
+
+.nav-cart i{
+    font-size: 30px;
+}
+
+
+
+.nav-cart{
+    font-weight: 700;  
+}
+
+
+
+
+
+/* panel */
+
+.panel{
+    height: 40px;
+    background-color: #222f3d;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+
+
+
+.panel-ops p{
+    display: inline;
+    gap: 7px;
+}
+
+
+
+
+
+.panel-ops{
+    width: 70%;
+    font-size: 0.85rem;
+}
+
+
+
+
+
+.panel-deals{
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+
+
+
+
+.hero-section{
+    background-image: url("../Images/hero_image.jpg");
+    background-size: cover;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+
+
+
+
+.hero-messege{
+    background-color: white;
+    color: black;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    margin-bottom: 25px;
+    width: 90%;
+}
+
+
+
+
+.click-here{
+    color: #007185;
+}
+
+
+
+
+
+
+
+
+
+
+/* other styling */
+
+
+
 .resultEl{
+    /* width: 80%; */
     display: flex;
     /* grid-template-columns: auto auto auto; */
     justify-content: center;
     flex-wrap: wrap;
-    gap: 40px;
+    /* gap: 40px; */
 }
 
-.header > h1{
-    color: #fff;
-}
 
 /* imgset */
 
@@ -23,6 +213,37 @@ body{
     text-align: center;
     /* padding: auto auto; */
 }
+
+
+
+.addToCart{
+    padding: 5px;
+    background-color: #000000;
+    color: #ff7b00;
+    border: 5px solid #fff;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+
+
+.addToCart:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+
+
+
+
+/* addCartClose */
+.addCartClose{
+    background-color: #000;
+    color: #fff;
+    font-weight: bold;
+}
+
+
 
 .header{
     background-color: #ae4444;
@@ -52,8 +273,17 @@ body{
 /* main */
 
 main{
+    /* font-family: monospace; */
     margin-top: 50px;
+    display: grid;
+    grid-template-columns: auto auto;
 }
+
+.side{
+    width: 20%;
+}
+
+
 
 /* .car-card{
 
@@ -62,6 +292,18 @@ main{
 
 
 
+a{
+    color: #fff;
+    /* border-right: 3px solid #fff; */
+    font-weight: bold;
+    padding: 5px;
+}
+
+
+.aHref{
+    border: 2px solid #fff;
+}
+
 
 
 
@@ -69,3 +311,78 @@ main{
     font-family: magenda;
     src: url("../Fonts/MagendaRegular-MVwjx.ttf");
 }
+
+
+
+
+
+
+
+
+/* in Js Work */
+
+.plusMinus, .addValue{
+    display: inline;
+    
+}
+
+
+
+
+
+
+/* logo shopping-Logo */
+
+.shopping-Logo:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+/* added to cart working */
+
+.openAddtoCart{
+    /* background-color: #d7e39a; */
+    position: sticky;
+    right: 20px;
+    top: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* footer Styling */
+
+footer{
+    margin-top: 30px;
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ThiswebLogo{
+    width: 100px;
+}
+
+.imgSize > img{
+    width: 60px;
+    padding-right: 25px;
+}
+
+

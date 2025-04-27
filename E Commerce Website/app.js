@@ -1,4 +1,5 @@
-//  Main Work
+// JavaScript Part
+
 let items = [
     {
         name: 'Down Shoulder T-Shirt',
@@ -11,7 +12,7 @@ let items = [
     {
         name: 'Watch',
         brand: "Rolex",
-        color: 'Silver & Golden',
+       color: 'Silver & Golden',
         price: 250,
         imgSrc: "https://watchclubpakistan.pk/cdn/shop/files/rn-image_picker_lib_temp_56edbdd8-5562-486c-a906-c5528adb838a.jpg?v=1735117788&width=533",
         iswatch: true
@@ -98,57 +99,119 @@ let items = [
     }
 ];
 
-
 let itemsListing = document.querySelector(".resultEl");
+let openAddtoCart = document.querySelector(".openAddtoCart");
 
-
-// in HTML 
-
-function listItemss(itmes) {
-    for (let i = 0; i < itmes.length; i++) {
-        let itemCard = makeCarCard(itmes[i]);
+function listItemss(items) {
+    for (let i = 0; i < items.length; i++) {
+        let itemCard = makeItemCard(items[i], i);
         itemsListing.innerHTML += itemCard;
     }
 }
 
-// in HTML 
-function makeCarCard(items) { 
-    return `<div style="border: 1px solid #ccc; padding: 10px; margin: 10px; width: 300px;" class="carCard">
-    <h2>${items.name} </h2> <p><b> Brand:</b> (${items.brand})</p>
-    <img src="${items.imgSrc}" alt="${items.name}" style="width: 90%; height: 250px; object-fit: cover;" class="imgset" />
-                <p><b>Color:</b> ${items.color}</p>
-                <p><b>Price:</b> $${items.price}</p>
-            </div>`;
+function makeItemCard(item, index) {
+    return `
+    <div style="border: 1px solid #ccc; padding: 10px; margin: 10px; width: 300px;" class="carCard">
+        <h2>${item.name}</h2>
+        <p><b>Brand:</b> (${item.brand})</p>
+        <br/><br/>
+        <img src="${item.imgSrc}" alt="${item.name}" style="width: 90%; height: 250px; object-fit: cover;" class="imgset" />
+        <br/><br/>
+        <p><b>Color:</b> ${item.color}</p>
+        <p><b>Price:</b> $${item.price}</p>
+        <button onclick="addCart(${index})" class="addToCart">Add to Cart</button>
+    </div>
+    `;
 }
 
 
 
-// Filter Work / Logic
 
+
+// Add to cart 
+
+function addCart(index) {
+    let item = items[index];
+    openAddtoCart.innerHTML = `
+    <div style="border: 2px solid #000; padding: 20px; width: 300px;">
+    <button onclick="closeCart()" class="addCartClose" >Close</button>
+        <br><br>
+            <h2>Added to Cart:</h2>
+            <h3>${item.name}</h3>
+            <img src="${item.imgSrc}" alt="${item.name}" style="width: 100%; height: 200px; object-fit: cover;" />
+            <p><b>Price:</b> $${item.price}</p>
+            <p><b>Brand:</b> ${item.brand}</p>
+            <br>
+             Quantity: <button onclick="minus(this)" class="minus">-</button>
+            <p class="addValue">1</p>
+            <button onclick="plus(this)" class="plus">+</button>
+            <br><br>
+            <button onclick="addtoOrderList()">Add to Order List</button>
+        </div>
+
+        </div>
+    `
+}
+
+
+
+function closeCart() {
+    openAddtoCart.innerHTML = "";
+}
+
+
+
+
+// Filter Funtion Working
 function filterCars(el) {
-    let filterHoiwiItmes = [];
-    // Shoes
+    let filterHoiwiItems = [];
     for (let i = 0; i < items.length; i++) {
         if (el.value === 'Shoes' && items[i].isShoes) {
-            filterHoiwiItmes.push(items[i]);
+            filterHoiwiItems.push(items[i]);
         } 
-    // T-Shirt
-    if (el.value === 'T-Shirt' && items[i].isTShirt) {
-        filterHoiwiItmes.push(items[i]);
+        if (el.value === 'T-Shirt' && items[i].isTShirt) {
+            filterHoiwiItems.push(items[i]);
+        }
+        if (el.value === 'watch' && items[i].iswatch) {
+            filterHoiwiItems.push(items[i]);
+        }
     }
-    // Watch
-    if (el.value === 'watch' && items[i].iswatch) {
-        filterHoiwiItmes.push(items[i]);
-    }
-}
-    // All Items show
-    if(el.value === 'All') {
-        filterHoiwiItmes = items.slice(0);
+    if (el.value === 'All') {
+        filterHoiwiItems = items.slice(0);
     }
 
     itemsListing.innerHTML = "";
-    listItemss(filterHoiwiItmes);
+    listItemss(filterHoiwiItems);
 }
-// by default show
-listItemss(items);
 
+
+
+
+// Plus Minus Functions
+function minus(btn) {
+    let card = btn.parentElement;
+    let valueEl = card.querySelector(".addValue");
+    let value = parseInt(valueEl.innerText);
+    if (value > 1) {
+        value--;
+        valueEl.innerText = value;
+    }
+}
+
+
+
+function plus(btn) {
+    let card = btn.parentElement;
+    let valueEl = card.querySelector(".addValue");
+    let value = parseInt(valueEl.innerText);
+    value++;
+    valueEl.innerText = value;
+}
+
+// Shooping Function
+function shooping() {
+    location = "../Shopping ya Total/index.html";
+}
+
+// Default Show
+listItemss(items);
